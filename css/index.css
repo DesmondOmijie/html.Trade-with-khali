@@ -1,0 +1,1337 @@
+ * {
+ 	margin: 0;
+ 	padding: 0;
+ 	box-sizing: border-box;
+ 	
+ }
+
+ *,
+ *::before,
+ *::after {
+ 	box-sizing: border-box;
+ }
+
+ html {
+ 	font-size: 63.50%;
+ 	scroll-behavior: smooth;
+ 	font-family: sans-serif;
+ }
+
+
+
+ body{
+ 	overflow-x: hidden;
+ 	overflow-y: auto;
+ 	position: relative;
+ 	opacity: 0;
+ 	animation: fadeIn 0.5s ease forwards;
+ }
+
+ @keyframes fadeIn {
+ 	to {
+ 		opacity: 1;
+ 	}
+ }
+
+
+
+/*page fade-in effect..*/
+
+ .page{
+ 	 opacity: 1;
+ 	 transition: opacity 0.5s ease;
+ 	 min-height: 100dvh;
+ 	 display: flex;
+ 	 flex-direction: column;
+ }
+
+ .page.fade-out{
+ 	opacity: 0;
+ }
+
+/*animated text reveal..*/
+
+main .reveal {
+	opacity: 0;
+	transform: translateY(40px);
+	transition: all 2.5s ease;
+	will-change: transform, opacity;
+}
+
+.reveal.active{
+	opacity: 1;
+	transform: translateY(0);
+}
+
+ /*styling for the header*/
+
+ header{
+ 	padding-top:2rem;
+ 	top: 0;
+ 	position: fixed;
+ 	display: flex;
+ 	justify-content: space-around;
+ 	background: black;
+ 	padding: 1.3rem;
+ 	z-index: 10;
+ 	width: 100%;
+ }
+
+ header .menu{
+ 	width: 4.5rem;
+ 	height: 4.5rem;
+ 	display: none;
+ 	color: white;
+ 	font-size: 2.7rem;
+ 	padding: 0.8rem;
+ 	cursor: pointer;
+ 	color: #e6e9f0;
+ 	border-radius: 1rem;
+ 	border: 0.01rem solid #e6e9f0 ;
+ }
+
+ /*styling for the logo..*/
+
+ header .logo {
+ 	display: flex;
+ 	padding: 1.2rem;
+ }
+
+ header .logo .bag{
+ 	color: #00ff00;
+ 	font-size:3.5rem;
+
+ }
+
+  header .logo > div {
+  	padding: 0.7rem;
+  }
+
+  header .logo h3 {
+  	 color: white;
+  	 font-size: 3rem;
+  	 
+  }
+
+   header .logo h4{
+   	color: white;
+   	font-size: 1.7rem;
+   }
+
+   /*styling for the nav bar...*/
+
+
+   header nav ul{
+   	 display: flex;
+   	 gap: 2rem;
+   	 padding: 1.2rem;
+   }
+
+   header nav ul li {
+   	 list-style: none;
+   	 color: white;
+   	 font-size: 1.6rem;
+   	 padding: 1rem;
+   	 cursor: pointer;
+   	 transition: 0.4s ease-in;
+   }
+    
+    header nav ul li:hover{
+    	font-size: 1.9rem;
+    	color:#00ff00;
+    	border-bottom: 0.01rem #00ff00 solid;
+    }
+
+
+     header nav ul li a {
+     	text-decoration: none;
+     	color: white;
+     	transition: 0.4s ease-in;
+     }
+
+     header nav ul li a:hover {
+     	color:#00ff00;
+     }
+
+     header nav ul .cate {
+     	 position: relative;
+     }
+
+header nav ul .logo{
+	display: none;
+}
+   
+
+   /*styling for the whatsapp button...*/
+
+   header button {
+   	border: 0.01rem #00ff00 solid;
+   	border-radius: 2rem;
+   	background: black;
+   	width: 20rem;
+    height: 4rem;
+    padding: 0.5rem;
+    transition: 0.4s ease-in;
+   }
+
+   header button:hover {
+      padding: 0.3rem;
+      width: 18rem;
+      header3rem
+   }
+
+   header button a {
+   	display: flex;
+   	justify-content: center;
+   	text-decoration: none;
+   	gap: 1rem;
+   	padding:0.4rem;
+
+   }
+
+    header button i {
+    	color: #00ff00;
+    	font-size: 1.7rem;
+    	transition: 0.4s ease-in;
+    }
+
+    header button i:hover {
+    	font-size: 1.5rem;
+    	color: white;
+    }
+
+header button p {
+	color: white;
+	font-size: 1.6rem;
+	transition: 0.4s ease-in;
+}
+
+header button p:hover {
+	font-size: 1.8rem;
+	color: #00ff00;
+}
+
+
+/*main section,,,, styling for the hero section..*/
+main {
+	padding-top:9rem;
+	min-height: 100dvh;
+   flex: 1;
+}
+
+main .hero {
+	display: flex;
+	gap:rem;
+	justify-content: center;
+    padding:1rem;
+	background:linear-gradient(145deg, 
+		 #000000 0%, #14101f 50%, #1a1628 100%);
+	background-blend-mode: overlay;
+    background-size: 300% 300%;
+	animation: gradientMove 15s ease infinite;
+	
+}
+
+@keyframes gradientMove{
+	0% {
+		background-position:0% 50% ;
+	}
+
+	50% {
+		background-position:100% 50% ;
+	}
+
+	100% {
+		background-position:0% 50% ;
+	}
+}
+
+main .hero .writing{
+	place-self: center;
+}
+
+main .hero .writing ul{
+	display: flex;
+	gap: 3rem;
+	color: #00ff00;
+	font-size: 1.6rem;
+   margin-top: 1rem;
+   padding: 1rem;
+   width: 30rem;
+ 
+}
+
+main .hero .writing h1 {
+	color: white;
+	padding: 1rem;
+	margin-top: rem;
+	font-size: 3.5rem;
+	/*text-align: center;*/
+}
+
+main .hero .writing h1 span {
+	color: #00ff00;
+}
+
+main .hero .writing p {
+	color: white;
+	margin-top: rem;
+	padding: 1rem;
+	font-size: 1.6rem;
+	/*text-align: center;*/
+}
+
+main .hero .writing > div {
+	display: flex;
+	gap: 1rem;
+	place-self: center;
+}
+
+main .hero .writing .whatsapp-Btn{
+	border-radius: 2rem;
+	width: 23rem;
+	height: 4rem;
+	padding:1 rem;
+	background: #00ff00;
+	border: none;
+	transition: 0.4s ease-in;
+}
+
+main .hero .writing .whatsapp-Btn:hover{
+	background: green;
+}
+
+main .hero .writing .whatsapp-Btn a {
+	text-decoration: none;
+	color: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 0.5rem;
+	padding:2 rem;
+	font-size: 2.3rem;
+	transition: 0.4s ease-in;
+}
+
+main .hero .writing .whatsapp-Btn a:hover{
+	font-size: 1.6rem;
+}
+
+main .hero .writing .Categories{
+	border-radius: 2rem;
+	width: 23rem;
+	height: 4rem;
+	padding:1 rem;
+	background: black;
+	border: 0.001rem #00ff00 solid;
+	transition: 0.4s ease-in;
+}
+
+main .hero .writing .Categories:hover {
+	border:0.01rem white solid;
+}
+
+main .hero .writing .Categories a {
+	text-decoration: none;
+	color: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 0.5rem;
+	padding:2 rem;
+	font-size: 2.3rem;
+	transition: 0.4s ease-in;
+}
+
+main .hero .writing .Categories a:hover{
+   font-size: 1.6rem;
+}
+
+/*styling for the section writing2...*/
+
+main .hero .writing2{
+	display: flex;
+	gap:1.2rem;
+	padding: 1rem;
+	margin-top: 2.3rem;
+}
+
+main .hero .writing2 .strength  {
+	display: flex;
+	gap: 1rem;
+	padding: 1rem;
+}
+
+main .hero .writing2 .strength .gr {
+	color: #00ff00;
+	font-size: 4rem;
+}
+
+main .hero .writing2 .strength h2 {
+	color: white;
+	padding: 0.3rem;
+}
+
+/*styling for the images section ..*/
+
+main .hero .images {
+	display: flex;
+	gap:rem;
+	padding: 0.7rem;
+
+}
+
+main .hero .images img {
+	width: 33rem;
+	height: 42rem;
+	padding-top: 0;
+	
+}
+
+main .hero .images > div{
+	display: flex;
+	gap: 1rem;
+	flex-direction: column;
+}
+
+main .hero .images > div img {
+	width: 10rem;
+	height: 10rem;
+	/*background: white;*/
+	border-radius: 2.2rem;
+	transform: skewX(10deg);
+	box-shadow: 0 2px 8px rgba(200, 162, 255, 0.3);
+}
+
+main .hero .images > div .ama{
+	background: white;
+}
+
+/*styling for the products section...*/
+main .products {
+	background: #faf5ff;
+}
+
+main .products .texts {
+	place-self: center;
+}
+
+main .products .texts h1{
+	color: #00ff00;
+	font-size: 1.7rem;
+	padding: 0.2rem;
+	text-align: center;
+	margin-top: 1rem;
+}
+
+main .products .texts h2 {
+	padding: 0.5rem;
+	font-size: 2.5rem;
+	text-align: center;
+}
+
+main .products .texts p{
+	padding: rem;
+	text-align: center;
+	font-size: 1.6rem;
+}
+
+main .products .cate {
+	display: flex;
+	gap: 1.5rem;
+	justify-content: center;
+	margin-top: 1rem;
+}
+
+main .products .cate > div {
+	width: 20rem;
+	height: 32rem;
+	padding: 1rem;
+	border-radius: 2rem;
+	display: flex;
+	justify-content:left;
+	align-items:center;
+	flex-direction: column;
+	background: white;
+	box-shadow: 0 8px 20px rgba(168, 139, 250, 0.08);
+	margin-bottom: 1.4rem;
+}
+
+main .products .cate > div img {
+	width: 16rem;
+	height: 13rem;
+	border-radius: 1.4rem;
+}
+
+main .products .cate > div .greenb{
+	background: #eaf7f0 ;
+	width: 14rem;
+	height: 12rem;
+	margin-top: 1rem;
+}
+
+main .products .cate > div .purpleb{
+	background:#f3edff ;
+	width: 14rem;
+	height: 12rem;
+	margin-top: 1rem;
+}
+
+main .products .cate > div .blueb{
+	background:#eaf2ff;
+	width: 14rem;
+	height: 12rem;
+	margin-top: 1rem;
+}
+
+main .products .cate > div .orangeb{
+	background:#fff4ec;
+	width: 14rem;
+	height: 12rem;
+	margin-top: 1rem;
+}
+
+main .products .cate > div h3 {
+	font-size: 1.8rem;
+	padding: 0.4rem;
+}
+
+main .products .cate > div p {
+	font-size: 1.6rem;
+	padding: 0.4rem;
+}
+
+/*styling the links in the product section..*/
+
+
+main .products .cate > div .green{
+	text-decoration: none;
+	color: #00ff00;
+	border: 0.01rem #00ff00 solid;
+	border-radius: 2rem;
+	text-align: center;
+	padding: 0.8rem;
+	font-size: 1.4rem;
+	margin-top: 1.3rem;
+	width: 15rem;
+	transition: 0.5s ease-in;
+}
+
+main .products .cate > div .green:hover{
+	 width: 13.5rem;
+	 font-size: 1rem;
+}
+
+main .products .cate > div .purple{
+	text-decoration: none;
+	color: #a020f0;
+	border: 0.01rem #a020f0 solid;
+	border-radius: 2rem;
+	text-align: center;
+	padding: 0.8rem;
+	font-size: 1.4rem;
+	margin-top: 1.3rem;
+	width: 15rem;
+	transition: 0.5s ease-in;
+}
+
+main .products .cate > div .purple:hover{
+	 width: 13.5rem;
+	 font-size: 0.9rem;
+}
+
+main .products .cate > div .blue{
+	text-decoration: none;
+	color: #007bff;
+	border: 0.01rem #007bff solid;
+	border-radius: 2rem;
+	text-align: center;
+	padding: 0.8rem;
+	font-size: 1.4rem;
+	margin-top: 1.3rem;
+	width: 15rem;
+	transition: 0.5s ease-in;
+}
+
+main .products .cate > div .blue:hover{
+	 width: 13.5rem;
+	 font-size: 1rem;
+}
+
+main .products .cate > div .orange{
+	text-decoration: none;
+	color: #ff7a00;
+	border: 0.01rem #ff7a00 solid;
+	border-radius: 2rem;
+	text-align: center;
+	padding: 0.8rem;
+	font-size: 1.4rem;
+	margin-top: 1.3rem;
+	width: 15rem;
+	transition: 0.5s ease-in;
+}
+
+main .products .cate > div .orange:hover{
+	 width: 13.5rem;
+	 font-size: 1rem;
+}
+
+/*styling for the about section....*/
+
+main .about{
+	position: relative;
+	background:  #14101f;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 2rem;
+}
+
+main .about .content {
+	background: #1a1628;
+   border-radius: 2rem;
+   box-shadow: 0 6px 16px rgba(10, 8, 20, 0.6);
+   border: 1px solid rgba(255, 255, 255, 0.05);
+   color: #e6e9f0 ;
+   padding: 3rem;
+   max-height: 19rem;
+   overflow-y: hidden;
+   transition: max-height 0.4s ease;
+}
+
+main .about .content > div{
+	place-self: center;
+	 display: flex;
+	 flex-direction: column;
+	 align-items: center;
+	 justify-content: center;
+	 margin-bottom: 1rem;
+	 border: 0.01rem #00ff00 solid;
+	 border-radius: 50%;
+	 width: 12rem;
+	 height: 12rem;
+}
+
+main .about .content > div h1 {
+	color: #00ff00;
+}
+
+main .about .content > div i {
+	font-size: 3.5rem;
+	color: #00ff00;
+
+}
+
+main .about .content p{
+	font-size: 1.6rem;
+	text-align: center;
+	padding: 0.5rem;
+	line-height: 2.6rem;
+
+}
+
+
+
+/*styling for the accordion...*/
+
+
+ main .about.active .content{
+	max-height: 69rem;
+}
+
+.info .about button i {
+	 padding: 0.5rem;
+	 cursor: pointer;
+	 transition: transform 0.3s ease;
+}
+
+.info.about.active button i{
+	transform: rotate(180deg);
+}
+
+
+
+/*styling for the how section..*/
+
+main .how{
+	position: relative;
+	background:  #14101f;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 2rem;
+}
+
+main .how .content {
+	background: #1a1628;
+   border-radius: 2rem;
+   box-shadow: 0 6px 16px rgba(10, 8, 20, 0.6);
+   border: 1px solid rgba(255, 255, 255, 0.05);
+   color: #e6e9f0 ;
+   padding: 3rem;
+   max-height: 19rem;
+   overflow-y: hidden;
+   transition: max-height 0.4s ease;
+}
+
+main .how .content > div{
+	place-self: center;
+	 display: flex;
+	 flex-direction: column;
+	 align-items: center;
+	 justify-content: center;
+	 margin-bottom: 1rem;
+	 border: 0.01rem #00ff00 solid;
+	 border-radius: 50%;
+	 width: 12rem;
+	 height: 12rem;
+	 padding: 2rem;
+}
+
+main .how .content > div h1 {
+	color: #00ff00;
+}
+
+main .how .content > div i {
+	font-size: 3.3rem;
+	color: #00ff00;
+}
+
+main .how .content h3{
+	text-align: center;
+	font-size: 1.9rem;
+	color: #00ff00;
+	padding: 1rem;
+}
+
+
+main .how .content p{
+	font-size: 1.6rem;
+	text-align: center;
+	padding: 0.5rem;
+	line-height: 2.6rem;
+}
+
+main .how .content p span {
+	padding: 0.5rem;
+	color:#00ff00 ;
+}
+
+
+/*styling for the accordion...*/
+
+
+ main .how.active .content{
+	max-height:65rem;
+}
+
+.info button i {
+	 padding: 0.5rem;
+	 cursor: pointer;
+	 transition: transform 0.3s ease;
+}
+
+.info.active button i{
+	transform: rotate(180deg);
+}
+
+/*styling for the FAQ section....*/
+
+main .faq{
+	position: relative;
+	background:  #14101f;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 2rem;
+}
+
+main .faq .content {
+	background: #1a1628;
+   border-radius: 2rem;
+   box-shadow: 0 6px 16px rgba(10, 8, 20, 0.6);
+   border: 1px solid rgba(255, 255, 255, 0.05);
+   color: #e6e9f0 ;
+   padding: 3rem;
+   max-height:19rem;
+   overflow-y: hidden;
+   transition: max-height 0.4s ease;
+}
+
+main .faq .content > div{
+	place-self: center;
+	 display: flex;
+	 flex-direction: column;
+	 align-items: center;
+	 justify-content: center;
+	 margin-bottom: 1rem;
+	 border: 0.01rem #00ff00 solid;
+	 border-radius: 50%;
+	 width: 12rem;
+	 height: 12rem;
+}
+
+main .faq .content > div h1 {
+	color: #00ff00;
+}
+
+main .faq .content > div i {
+	font-size: 3.5rem;
+	color: #00ff00;
+}
+
+main .faq .content h3{
+	text-align: center;
+	font-size: 1.9rem;
+	color: #00ff00;
+}
+
+main .faq .content .q{
+	font-size: 1.6rem;
+	text-align: center;
+	padding: 0.5rem;
+	line-height: 2.6rem;
+	color: #00ff00;
+}
+
+main .faq .content .a{
+	font-size: 1.6rem;
+	text-align: center;
+	padding: 0.5rem;
+	line-height: 2.6rem;
+}
+
+main .faq .content p{
+	font-size: 1.6rem;
+	text-align: center;
+	padding: 0.5rem;
+	line-height: 2.6rem;
+	text-align: center;
+}
+
+/*styling for the accordion...*/
+
+
+ main .faq.active .content{
+	max-height: 79rem;
+}
+
+.info .faq button i {
+	 padding: 0.5rem;
+	 cursor: pointer;
+	 transition: transform 0.3s ease;
+}
+
+.info.faq.active button i{
+	transform: rotate(180deg);
+}
+
+
+/*sttyling for the choose section..*/
+
+main .choose {
+	margin-top: 1.5rem;
+	background:#faf5ff ;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 1.5rem;
+}
+
+main .choose .reasons {
+	display: flex;
+}
+
+main .choose .texts h1{
+	color: #00ff00;
+	font-size: 1.7rem;
+	padding: 0.2rem;
+	text-align: center;
+	margin-top: 1rem;
+}
+
+main .choose .texts h2 {
+	padding: 0.5rem;
+	font-size: 2.5rem;
+	text-align: center;
+}
+
+main .choose .reasons > div {
+	display: flex;
+	gap: 1.3rem;
+	padding: 1.2rem;
+}
+
+main .choose .reasons > div .green {
+	font-size: 4rem;
+	color: #00ff00;
+	background: #eaf7f0;
+	width: 6.5rem;
+	height: 6.5rem;
+	border-radius: 1.4rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+main .choose .reasons > div .purple {
+	font-size: 4rem;
+	color: #a020f0;
+	background:#f3edff;
+	width: 6.5rem;
+	height: 6.5rem;
+	border-radius: 1.4rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+main .choose .reasons > div .blue {
+	font-size: 4rem;
+	color:#007bff;
+	background:#eaf2ff;
+	width: 6.5rem;
+	height: 6.5rem;
+	border-radius: 1.4rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+main .choose .reasons > div .orange {
+	font-size: 4rem;
+	color:#ff7a00;
+	background:#fff4ec;
+	width: 6.5rem;
+	height: 6.5rem;
+	border-radius: 1.4rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+main .choose .reasons > div > div {
+	padding: 1.2rem;
+}
+
+main .choose .reasons > div > div h3 {
+	padding: 0.3rem;
+	font-size: 1.8rem;
+}
+
+main .choose .reasons > div > div p {
+	 font-size: 1.6rem;
+}
+
+/*styling for the footer section...*/
+
+footer{
+	/*height:40%;*/
+}
+
+footer .foot {
+	display: flex;
+	justify-content: center;
+	align-items: left;
+	gap: 1.6rem;
+	background:#14101f;
+	margin-top: 0.4rem;
+	padding: 1.4rem;
+	min-height:auto;
+}
+
+footer .logo {
+ 	display: flex;
+ 	padding: 1.2rem;
+ }
+
+ footer .logo .bag{
+ 	color: #00ff00;
+ 	font-size:4rem;
+
+ }
+
+  footer .logo > div {
+  	padding: 0.7rem;
+  }
+
+  footer .logo h3 {
+  	 color: #e6e9f0;
+  	 font-size: 1.9rem;
+  }
+
+   footer .logo h4{
+   	color: #e6e9f0;
+   	font-size: 1.9rem;
+   }
+
+   footer .foot p {
+   	color: #e6e9f0;
+   	padding: 0.9rem;
+   	font-size: 1.6rem;
+   }
+
+   footer .foot .links {
+   	padding: 0.8rem;
+   }
+
+   footer .foot .links h1{
+   	font-size: 1.9rem;
+   	color: #e6e9f0;
+   	padding: 0.5rem;
+   }
+
+   footer .foot .links ul li {
+   	color: #e6e9f0;
+   	padding:0.5rem;
+   	font-size: 1.6rem;
+   	list-style: none;
+   }
+
+   footer .foot .links ul li a{
+   	text-decoration: none;
+   	color: #e6e9f0;
+   	font-size: 1.6rem;
+   	transition: 0.4s ease-in;
+   }
+  
+  footer .foot .links ul li a:hover{
+  	  font-size: 1.4rem;
+      border-bottom: 0.02rem #e6e9f0 solid;
+      padding-bottom: 0.4rem;
+  }
+
+    footer .foot .cate {
+   	padding: 0.8rem;
+   }
+
+   footer .foot .cate h1{
+   	font-size: 1.6rem;
+   	color: #e6e9f0;
+   	padding: 0.5rem;
+   }
+
+   footer .foot .cate ul li {
+   	
+   	padding:0.5rem;
+   	font-size: 1.6rem;
+   	list-style: none;
+   }
+
+   footer .foot .cate ul li a{
+   	text-decoration: none;
+   	color: #e6e9f0;
+   	font-size: 1.6rem;
+   	transition: 0.4s ease-in;
+   }
+
+   footer .foot .cate ul li a:hover{
+      font-size: 1.4rem;
+      border-bottom: 0.02rem #e6e9f0 solid;
+      padding-bottom: 0.4rem;
+   }
+
+   footer .foot .chat {
+   	padding: 0.8rem;
+   }
+
+   footer .foot .chat h1{
+   	font-size: 1.6rem;
+   	color: #e6e9f0;
+   	padding: 0.5rem;
+   }
+
+   footer .foot .chat button{
+   	border-radius: 2rem;
+	width: 23rem;
+	height: 4rem;
+	padding:1 rem;
+	background: #00ff00;
+	border: none;
+	transition: 0.4s ease-in;
+   }
+
+  footer .foot .chat button:hover{
+  	  width: 21rem;
+	height: 3rem;
+	background:#14101f ;
+	border: 0.01rem #00ff00 solid;
+  }
+
+   footer .foot .chat button a{
+   	text-decoration: none;
+   	padding: 1.2rem;
+   	color: white;
+   	font-size: 1.6rem;
+   	transition: 0.4s ease-in;
+   }
+
+   footer .foot .chat button a:hover{
+   	font-size: 1.3rem;
+   	color: #00ff00;
+   	background: none;
+   }
+
+
+   /*responsive design for mobile devices..*/
+
+   @media(max-width: 480px){
+   	html {
+   		/*font-size: 46.54%;*/
+   	}
+     
+     header{
+     	position:relative;
+     	position: fixed;
+     flex-direction: row-reverse;
+     justify-content: space-between;
+     width: 100%;
+     }
+
+   	header .menu {
+       display: flex;
+       justify-content: center;
+       align-items: center;
+
+   	}
+
+   	header nav {
+   		position:absolute;
+   		position: fixed;
+   		background: #14101f;
+   		top: 9rem;
+   		right:34.6rem;
+   		left:-98%;
+   		width: 30rem;
+   		min-height: 93dvh;
+   		border-radius: 1rem;
+      /*navbar animation...*/
+   		transform: translateX(-80px);
+  	  transition: opacity 2s ease, transform 2s;
+      opacity: 0;
+   	  z-index: 1000;
+   	}
+
+   	 .reveal{
+   	 	left: 0rem;
+   			opacity: 1;
+      	z-index: 1;
+  	    transform: translateX(0.1px);
+        transition: opacity 1s ease, transform 2s;
+   	}
+
+   
+
+   	header nav ul{
+   		flex-direction:column;
+   	
+   	}
+
+   	header nav ul li a{
+   		text-align: right;
+
+   	}
+
+     header button {
+     	display: none;
+     }
+
+    header nav ul .logo{
+	display:flex;
+	flex-direction: column;
+	margin-top: 19.5rem;
+}
+
+     /*main section...*/
+
+     main .hero{
+     	flex-direction: column;
+     }
+
+     main .hero .writing h1 {
+     	font-size: 2.7rem;
+     }
+
+     main .hero .writing > div{
+     	flex-direction: column;
+     	align-items: center;
+     }
+
+      main .hero .writing2 .strength  i{
+      	align-self: center;
+      	font-size: 6.8rem;
+      }
+
+      main .hero .writing > div h2{
+      	text-align: center;
+      }
+
+     main .hero .images{
+     	display: none;
+     }
+
+     main .hero .writing ul{
+      place-self: center;
+      align-items: center;
+      justify-content: center;
+   }
+
+   main .products{
+   	padding: 0.4rem;
+   }
+
+   main .products .cate{
+      width: 20rem;
+   	display: grid;
+   	/*grid-template-rows: repeat(auto-fit, minmax(250px, 1fr));*/
+   	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+   	gap: 1rem;
+   	place-self: center;
+   	place-items: center;
+   }
+
+   main .choose .reasons{
+   	display: grid;
+   	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+   	gap: 1rem;
+   	place-self: center;
+   	/*padding: 1rem;*/
+   	place-items: center;
+      
+   }
+
+ main .choose .reasons > div{
+ 	width:20rem;
+ 	align-items: center;
+ }
+
+   /*footer....*/
+
+   footer{
+   	min-height: 100dvh;
+   	position: relative;
+   }
+
+   footer .foot {
+   	flex-direction: column;
+   	min-height: 100dvh;
+   }
+
+   footer .foot .links ul li a {
+   	text-decoration: underline;
+   	text-underline-offset: 4px;
+   }
+
+    footer .foot .cate ul li a {
+   	text-decoration: underline;
+   	text-underline-offset: 4px;
+   }
+}
+
+/*responsive design for big phones and small tablets..*/
+
+@media(min-width: 480.1px) and (max-width: 767px){
+	html {
+		/*font-size: 58.8%;*/
+	}
+
+	header{
+		flex-direction: column;
+		align-items: center;
+		width: 100vw;
+	}
+
+    header button {
+     	display: none;
+     }
+
+      main{
+      	padding-top: 15rem;
+      }
+
+    main .hero .images img {
+	display: none;
+  }
+
+	main .hero .images > div{
+		display: none;
+	}
+
+	main .products .cate{
+      width: 20rem;
+   	display: grid;
+   	grid-template-columns: 1fr 1fr;
+   	grid-template-rows: 1fr 1fr;
+   	place-self: center;
+   }
+
+   main .choose .reasons{
+   	display: grid;
+   	grid-template-columns: 1fr 1fr;
+   	grid-template-rows: 1fr 1fr;
+   	/*place-self: center;*/
+   	/*padding: 1rem;*/
+      
+   }
+
+   footer .foot{
+   	display: grid;
+   	grid-template-columns: 1fr 1fr;
+   	grid-template-rows: 1fr 1fr;
+   }
+
+
+   footer .foot .links ul li a {
+   	text-decoration: underline;
+   	text-underline-offset: 4px;
+   }
+
+    footer .foot .cate ul li a {
+   	text-decoration: underline;
+   	text-underline-offset: 4px;
+   }
+}
+
+
+/*responsive design for a tablet device...*/
+
+
+@media(min-width: 767.1px) and (max-width: 1000px){
+  html{
+  	/*font-size: 59.8%;*/
+  }
+
+      header button {
+     	display: none;
+     }
+
+  main{
+  	padding-top: 10.5rem;
+  }
+
+  main .hero .images img {
+	width: 25rem;
+	height: 35rem;
+	padding-top: 0;
+	
+}
+
+  main .hero .images > div{
+		display: none;
+	}	
+
+	main .products .cate{
+      width: 20rem;
+   	display: grid;
+   	grid-template-columns: 1fr 1fr;
+   	grid-template-rows: 1fr 1fr;
+   	place-self: center;
+   }
+
+
+	main .choose .reasons{
+   	display: grid;
+   	grid-template-columns: 1fr 1fr;
+   	grid-template-rows: 1fr 1fr;
+}

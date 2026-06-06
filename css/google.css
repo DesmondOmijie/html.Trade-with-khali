@@ -1,0 +1,553 @@
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+
+}
+
+html {
+ 	font-size: 63.50%;
+ 	scroll-behavior: smooth;
+ 	font-family: sans-serif;
+ }
+
+body{
+   position: relative;
+   opacity: 0;
+   animation: fadeIn 0.5s ease forwards;
+}
+
+
+@keyframes fadeIn {
+   to {
+      opacity: 1;
+   }
+ }
+
+
+
+/*page fade-in effect..*/
+
+ .page{
+    opacity: 1;
+    transition: opacity 0.5s ease;
+ }
+
+ .page.fade-out{
+   opacity: 0;
+ }
+
+main .reveal {
+   opacity: 0;
+   transform: translateX(-50px);
+   transition: all 2.5s ease;
+   will-change: transform, opacity;
+}
+
+.reveal.active{
+   opacity: 1;
+   transform: translateX(0);
+}
+
+ /*styling for the header*/
+
+ header{
+   padding-top:2rem;
+   top: 0;
+   position: fixed;
+ 	display: flex;
+ 	justify-content: space-around;
+ 	background:linear-gradient(145deg, 
+       #000000 0%, #14101f 50%, #1a1628 100%);
+   background-blend-mode: overlay;
+    background-size: 300% 300%;
+   animation: gradientMove 15s ease infinite;
+   padding: 1.3rem;
+      z-index: 10;
+   width: 100vw;
+ 
+   
+}
+
+@keyframes gradientMove{
+   0% {
+      background-position:0% 50% ;
+   }
+
+   50% {
+      background-position:100% 50% ;
+   }
+
+   100% {
+      background-position:0% 50% ;
+   }
+}
+ 	
+
+ header .menu{
+   width: 4.5rem;
+   height: 4.5rem;
+   cursor: pointer;
+   display: none;
+   color: white;
+   font-size: 1.8rem;
+   padding: 0.8rem;
+   color: #e6e9f0;
+   border-radius: 1rem;
+   border: 0.01rem solid #e6e9f0 ;
+ }
+
+ /*styling for the logo..*/
+
+ header .logo {
+ 	display: flex;
+ 	padding: 1.2rem;
+ }
+
+ header .logo .bag{
+ 	color: #00ff00;
+ 	font-size:4rem;
+
+ }
+
+  header .logo > div {
+  	padding: 0.7rem;
+  }
+
+  header .logo h3 {
+  	 color: white;
+  	 font-size: 1.7rem;
+  }
+
+   header .logo h4{
+   	color: white;
+   	font-size: 1.3rem;
+   }
+
+   /*styling for the nav bar...*/
+  
+
+   header nav ul{
+   	 display: flex;
+   	 gap: 2rem;
+   	 padding: 1.2rem;
+   }
+
+   header nav ul li {
+   	 list-style: none;
+   	 color: white;
+   	 font-size: 1.3rem;
+   	 padding: 1rem;
+   	 cursor: pointer;
+   	 transition: 0.4s ease-in;
+   }
+    
+    header nav ul li:hover{
+    	font-size: 1.5rem;
+    	color:#00ff00;
+    	border-bottom: 0.01rem #00ff00 solid;
+    }
+
+
+     header nav ul li a {
+     	text-decoration: none;
+     	color: white;
+     	transition: 0.4s ease-in;
+     }
+
+     header nav ul li a:hover {
+     	color:#00ff00;
+     }
+
+   
+
+   header nav ul .logo{
+   display: none;
+   } 
+   /*styling for the whatsapp button...*/
+
+   header button {
+   	border: 0.01rem #00ff00 solid;
+   	border-radius: 2rem;
+   	background: black;
+   	width: 20rem;
+    height: 4rem;
+    padding: 0.5rem;
+    transition: 0.4s ease-in;
+   }
+
+   header button:hover {
+      padding: 0.3rem;
+      width: 18rem;
+      header3rem
+   }
+
+   header button a {
+   	display: flex;
+   	justify-content: center;
+   	text-decoration: none;
+   	gap: 1rem;
+   	padding:0.4rem;
+
+   }
+
+    header button i {
+    	color: #00ff00;
+    	font-size: 1.7rem;
+    	transition: 0.4s ease-in;
+    }
+
+    header button i:hover {
+    	font-size: 1.5rem;
+    	color: white;
+    }
+
+header button p {
+	color: white;
+	font-size: 1.4rem;
+	transition: 0.4s ease-in;
+}
+
+header button p:hover {
+	font-size: 1.5rem;
+	color: #00ff00;
+}
+
+/*styling for the main section...
+hero section styling....*/
+
+main{
+   padding-top: 9rem;
+}
+
+main .hero {
+
+   background: #14101f;
+   display: flex;
+   gap: 1.5rem;
+   padding: 1.4rem;
+   justify-content:left;
+   align-items: left;
+   padding-left: 10rem;
+}
+
+main .hero .writing {
+   padding: 1.3rem;
+}
+
+main .hero .writing .h5{
+   color: #00ff00;
+   font-size: 1.2rem;
+   padding: 1rem;
+   border: 0.02rem #00ff00 solid;
+   border-radius: 2rem;
+   text-align: center;
+   width: 16rem;
+}
+
+main .hero .writing h1 {
+   padding: 1rem;
+   color: #e6e9f0;
+   font-size: 6rem;
+}
+
+main .hero .writing p {
+   color:#e6e9f0 ;
+   padding: 0.3rem;
+   font-size: 1.9rem;
+}
+
+main .hero .writing > div {
+   padding: 0.7rem;
+   display: flex;
+   gap:3rem;
+}
+
+main .hero .writing > div .strength .gr{
+   color:#00ff00 ;
+   padding: 0.4rem;
+   font-size: 3rem;
+}
+
+main .hero .writing > div .strength h3{
+   color:#e6e9f0 ;
+   font-size: 1.2rem;
+   padding: 0.4rem;
+}
+
+
+
+/*button styling..*/
+
+ main .hero .writing button{
+   margin-top: 1rem;
+      border-radius: 2rem;
+   width: 23rem;
+   height: 4rem;
+   padding:1 rem;
+   background: green;
+   border: none;
+   transition: 0.4s ease-in;
+   }
+
+  main .hero .writing button:hover{
+     width: 21rem;
+   height: 3rem;
+   background:#14101f ;
+   border: 0.01rem #00ff00 solid;
+  }
+
+   main .hero .writing button a{
+      text-decoration: none;
+      padding: 1.2rem;
+      color: white;
+      font-size: 1.3rem;
+      transition: 0.4s ease-in;
+   }
+
+   main .hero .writing button a:hover{
+      font-size: 1.1rem;
+      color: #00ff00;
+      background: none;
+   }
+
+
+   /*styling for the image section ..*/
+
+   main .hero .image img{
+   width: 35rem;
+   height: 41rem;
+
+}
+
+/*styling the product section....*/
+
+main .products{
+   border-top:0.01rem gray solid;
+   background: #14101f;
+   padding: 1.3rem;
+}
+
+main .products h1{
+   color: #e6e9f0;
+   font-size: 2.2rem;
+   padding: 0.2rem;
+   text-align: center;
+}
+
+main .products p{
+   color: #e6e9f0 ;
+   font-size: 1.3rem;
+   padding: 0.4rem;
+   text-align: center;
+   margin-bottom: 1rem;
+}
+
+main .products .images{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap:2rem;
+  place-self: center;
+}
+
+main .products .images figure{
+   height: 30rem;
+   width: 25rem;
+   background: #1a1628;
+   border-radius: 2rem;
+   box-shadow: 0 6px 16px rgba(10, 8, 20, 0.6);
+   border: 1px solid rgba(255, 255, 255, 0.05);
+
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: left;
+   padding-top: 1.4rem;
+}
+
+main .products .images figure img{
+   width: 11rem;
+   height: 10rem;
+   background: #e6e9f0;
+   border-radius: 2rem;
+   padding: 1rem;
+
+   box-shadow: 0 8px 24px rgba(15, 10, 30, 0.45);
+   border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+main .products .images figure figcaption {
+    color: #e6e9f0;
+    padding: 1.3rem;
+    font-size: 1.8rem;
+}
+
+main .products .images figure p {
+   color: #e6e9f0;
+   font-size: 1.5rem;
+}
+
+/*responsive design for mobile devices...*/
+
+@media(max-width: 480px){
+   html {
+         
+      }
+
+     
+     header{
+      padding-top:1rem;
+       top: 0;
+      position:relative;
+      position: fixed;
+     flex-direction: row-reverse;
+     width: 100%;
+     }
+
+      header .menu {
+       display:flex;
+       justify-content: center;
+       align-items: center;
+
+      }
+
+
+      header nav {
+         position: fixed;
+         position:absolute;
+          justify-content: space-between;
+         background: #14101f;
+         top: 9rem;
+         right:34.6rem;
+         left: 0rem;
+         width: 30rem;
+         height: 90vh;
+         border-radius: 1rem;
+         display:flex;
+      /*navbar animation...*/
+       transform: translateX(-80px);
+      transition: opacity 2s ease, transform 2s;
+      opacity: 0;
+        z-index: 1000;
+      }
+
+      .reveal{
+         left: 0rem;
+            opacity: 1;
+         z-index: 1;
+       transform: translateX(0.1px);
+        transition: opacity 1s ease, transform 2s;
+      }
+
+      header nav ul{
+         flex-direction:column;
+      
+      }
+
+      header nav ul li a{
+         text-align: right;
+         
+
+      }
+
+     header button {
+      display: none;
+     }
+
+    header nav ul .logo{
+   display:flex;
+   flex-direction: column;
+   margin-top: 12.5rem;
+}
+
+/*styling for the main section...*/
+
+main{
+   padding-top:8rem;
+   place-self: center;
+}
+
+ main .hero{
+      flex-direction: column;
+     justify-content: left;
+      
+     }
+    
+     main .hero .writing h1 {
+      font-size: 2.7rem;
+     }
+
+     main .hero .image img{
+      display: none;
+     }
+
+     main .products .images{
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      padding: rem;
+      place-self: center;
+     }
+
+     main .products .images figure{
+       width: 20rem;
+     }
+}
+
+
+/*responsive design for big phones and small tablets..*/
+
+@media(min-width: 480.1px) and (max-width: 767px){
+  html {
+      
+   }
+
+   header{
+      flex-direction: column;
+      align-items: center;
+      width: 100vw;
+   }
+
+    header button {
+      display: none;
+     }
+
+
+     /*styling for the main section..*/
+    
+     main{
+         padding-top: 15rem;
+      }
+
+    main .hero .image img {
+   display: none;
+  }
+
+ main .products .images{
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      padding: rem;
+     }
+
+}
+
+
+/*responsive design for a tablet device...*/
+
+
+@media(min-width: 767.1px) and (max-width: 1000px){
+   html{
+   
+  }
+
+  main{
+   padding-top: 9rem;
+  }
+
+  main .hero .images img {
+   width: 25rem;
+   height: 35rem;
+   padding-top: 0;
+   
+}
+
+}
